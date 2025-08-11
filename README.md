@@ -1,24 +1,49 @@
-# Circletone
+# circletone
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+A modern Angular 19+ UI component library with a comprehensive set of components, forms, and utilities. Built under principles of Atomic design with TailwindCSS.
 
-## Code scaffolding
+**NOTE**: This is a release repository, the source-code for this library is not yet ready to be published in a formal way. Repo is needed for running [buzz-talk](https://github.com/SirKedon/buzz-talk) project though.
 
-Run `ng generate component component-name --project circletone` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project circletone`.
-> Note: Don't forget to add `--project circletone` or else it will be added to the default project in your `angular.json` file. 
+## Features
 
-## Build
+- Modern Angular 19+ support
+- Comprehensive component library (buttons, cards, menus, accordions, etc.)
+- Form controls with Angular Forms integration
+- Custom directives and pipes
+- Responsive design utilities
+- Themeable with Tailwind CSS integration
 
-Run `ng build circletone` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Publishing
+### Installation
 
-After building your library with `ng build circletone`, go to the dist folder `cd dist/circletone` and run `npm publish`.
+```bash
+npm install git+https://github.com/SirKeldon/circletone.git#v0.84.2
+```
 
-## Running unit tests
+### Setup
 
-Run `ng test circletone` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Add the CircleTone styles to your `angular.json`:
 
-## Further help
+```json
+    "assets": [
+        "<your_assets_folders_and_files>"
+        {
+        "glob": "**/*",
+        "input": "node_modules/circletone/assets",
+        "output": "assets/"
+        }
+    ],
+    "styles": ["node_modules/circletone/lib/main.scss", "<your_styles>.css"],
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. Import components in your module or standalone components:
+
+```typescript
+import { ButtonComponent } from 'circletone';
+
+@Component({
+  // ...
+  imports: [ButtonComponent]
+})
+```

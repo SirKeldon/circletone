@@ -1,6 +1,6 @@
 {
   "name": "circletone",
-  "version": "0.84.2",
+  "version": "0.84.3",
   "peerDependencies": {
     "@angular/common": "^19.2.14",
     "@angular/core": "^19.2.14",
