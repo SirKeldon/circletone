@@ -1,0 +1,35 @@
+import { EventEmitter } from '@angular/core';
+import { FormGenericComponent } from '../../services/form-generic.abstract';
+import { ComponentPosition } from '../../model/components/component-position.type';
+import { FormGroupDirective } from '@angular/forms';
+import { FormOptionBase } from '../../model/forms/form-base.model';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { ComponentDisposition } from '../../model/components/component-disposition.enum';
+import * as i0 from "@angular/core";
+export declare class AutocompleteComponent extends FormGenericComponent {
+    private readonly destroyRef;
+    formControlName: string;
+    key: string;
+    options: FormOptionBase[];
+    label: string;
+    icon: string;
+    helper: string;
+    placeholder: string;
+    value: any;
+    inputValue: string;
+    iconPosition: ComponentPosition;
+    disposition: ComponentDisposition;
+    fullSize: boolean;
+    multiple: boolean;
+    showError: boolean;
+    typed: EventEmitter<string>;
+    selected: EventEmitter<any>;
+    focusOut$: Subject<any>;
+    inputValue$: BehaviorSubject<string>;
+    constructor(formGroupDirective: FormGroupDirective);
+    input(value: string): void;
+    setValue(value: any, propagate?: boolean): void;
+    writeValue(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteComponent, "ct-autocomplete", never, { "formControlName": { "alias": "formControlName"; "required": false; }; "key": { "alias": "key"; "required": true; }; "options": { "alias": "options"; "required": true; }; "label": { "alias": "label"; "required": false; }; "icon": { "alias": "icon"; "required": false; }; "helper": { "alias": "helper"; "required": false; }; "placeholder": { "alias": "placeholder"; "required": false; }; "value": { "alias": "value"; "required": false; }; "inputValue": { "alias": "inputValue"; "required": false; }; "iconPosition": { "alias": "iconPosition"; "required": false; }; "disposition": { "alias": "disposition"; "required": false; }; "fullSize": { "alias": "fullSize"; "required": false; }; "multiple": { "alias": "multiple"; "required": false; }; "showError": { "alias": "showError"; "required": false; }; }, { "typed": "typed"; "selected": "selected"; }, never, never, true, never>;
+}

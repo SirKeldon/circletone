@@ -1,0 +1,36 @@
+import { EventEmitter } from '@angular/core';
+import { FormGroupDirective } from '@angular/forms';
+import { FormGenericComponent } from '../../services/form-generic.abstract';
+import { ComponentPosition } from '../../model/components/component-position.type';
+import { ComponentDisposition } from '../../model/components/component-disposition.enum';
+import { BehaviorSubject } from 'rxjs';
+import * as i0 from "@angular/core";
+export declare class InputComponent extends FormGenericComponent {
+    protected formGroupDirective: FormGroupDirective;
+    formControlName: string;
+    key: string;
+    type: 'password' | 'text' | 'number';
+    value: any;
+    label: string;
+    icon: string;
+    helper: string;
+    placeholder: string;
+    symbol: string;
+    canDelete: boolean;
+    fullSize: boolean;
+    showError: boolean;
+    min: number;
+    max: number;
+    iconPosition: ComponentPosition;
+    disposition: ComponentDisposition;
+    typed: EventEmitter<string>;
+    showDelete$: BehaviorSubject<boolean>;
+    onFocusOut(): void;
+    constructor(formGroupDirective: FormGroupDirective);
+    input(event: Event): void;
+    clearValue(): void;
+    setValue(value: any, propagate?: boolean): void;
+    writeValue(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputComponent, [{ optional: true; }]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputComponent, "ct-input", never, { "formControlName": { "alias": "formControlName"; "required": false; }; "key": { "alias": "key"; "required": false; }; "type": { "alias": "type"; "required": false; }; "value": { "alias": "value"; "required": false; }; "label": { "alias": "label"; "required": false; }; "icon": { "alias": "icon"; "required": false; }; "helper": { "alias": "helper"; "required": false; }; "placeholder": { "alias": "placeholder"; "required": false; }; "symbol": { "alias": "symbol"; "required": false; }; "canDelete": { "alias": "canDelete"; "required": false; }; "fullSize": { "alias": "fullSize"; "required": false; }; "showError": { "alias": "showError"; "required": false; }; "min": { "alias": "min"; "required": false; }; "max": { "alias": "max"; "required": false; }; "iconPosition": { "alias": "iconPosition"; "required": false; }; "disposition": { "alias": "disposition"; "required": false; }; }, { "typed": "typed"; }, never, never, true, never>;
+}

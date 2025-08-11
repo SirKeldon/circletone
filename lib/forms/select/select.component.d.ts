@@ -1,0 +1,36 @@
+import { DestroyRef, ElementRef, EventEmitter, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { FormOptionBase } from '../../model/forms/form-base.model';
+import { Subject } from 'rxjs';
+import { FormGroupDirective } from '@angular/forms';
+import { FormGenericComponent } from '../../services/form-generic.abstract';
+import { ComponentDisposition } from '../../model/components/component-disposition.enum';
+import * as i0 from "@angular/core";
+export declare class SelectComponent extends FormGenericComponent implements OnInit, OnChanges {
+    protected formGroupDirective: FormGroupDirective;
+    private readonly destroyRef;
+    focusOut$: Subject<any>;
+    isOpen: boolean;
+    option: string;
+    formControlName: string;
+    key: string;
+    options: FormOptionBase[];
+    label: string;
+    helper: string;
+    placeholder: string;
+    value: any;
+    disposition: ComponentDisposition;
+    fullSize: boolean;
+    showError: boolean;
+    selected: EventEmitter<any>;
+    trigger: ElementRef<HTMLButtonElement>;
+    panel: ElementRef<HTMLDivElement>;
+    constructor(formGroupDirective: FormGroupDirective, destroyRef: DestroyRef);
+    ngOnInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    toggle(): void;
+    close(): void;
+    selectOption(key: any, propagate?: boolean): void;
+    writeValue(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectComponent, [{ optional: true; }, null]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectComponent, "ct-select", never, { "formControlName": { "alias": "formControlName"; "required": false; }; "key": { "alias": "key"; "required": false; }; "options": { "alias": "options"; "required": true; }; "label": { "alias": "label"; "required": false; }; "helper": { "alias": "helper"; "required": false; }; "placeholder": { "alias": "placeholder"; "required": false; }; "value": { "alias": "value"; "required": false; }; "disposition": { "alias": "disposition"; "required": false; }; "fullSize": { "alias": "fullSize"; "required": false; }; "showError": { "alias": "showError"; "required": false; }; }, { "selected": "selected"; }, never, never, true, never>;
+}

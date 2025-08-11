@@ -1,0 +1,25 @@
+{
+  "name": "circletone",
+  "version": "0.84.2",
+  "peerDependencies": {
+    "@angular/common": "^19.2.14",
+    "@angular/core": "^19.2.14",
+    "@angular/cdk": "^19.2.14"
+  },
+  "exports": {
+    "./tailwind.config": "./tailwind.config.js",
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./fesm2022/circletone.mjs"
+    }
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "module": "fesm2022/circletone.mjs",
+  "typings": "index.d.ts"
+}
